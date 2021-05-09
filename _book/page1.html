@@ -1,0 +1,420 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>UnityからOqulusQuest2へビルドする方法 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.19">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="page1.html">
+            
+                <a href="page1.html">
+            
+                    
+                    UnityからOqulusQuest2へビルドする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >UnityからOqulusQuest2へビルドする方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="unityからoculusquest2へビルドする方法">UnityからOculusQuest2へビルドする方法</h1>
+<h2 id="oculusqest2-とは">OculusQest2 とは</h2>
+<p><br></p>
+<h3 id="oculusqestの概要">OculusQestの概要</h3>
+<p><img src="img/image1-1.png" alt></p>
+<p>OculusQuest2は、自分の頭に被ってVRの映像やゲームを楽しめる機器です。</p>
+<p>VRデバイスは大きく分けて「PC接続型」「一体型」「スマホを使うVRゴーグル」の3種類があります。<br>Quest 2は「一体型」です。VR内で現実と同じように体や手を動かすことができ、スマホを差し込むVRゴーグルよりもリッチな体験ができます。</p>
+<p>VRゲーム、動画鑑賞、ネットサーフィンなど、実にさまざまなことが可能です。特にVRゲームはリズムゲームやスポーツ、ガンシューティング、ダンスといった身体を動かすタイプのものが多く、今まで遊園地やゲームセンターでしか遊べなかったようなゲームを家にいながらプレイできます。</p>
+<p>またアバターを使って、現実では遠方にいる人たちにも会えます。マイクが内蔵されているので、バーチャル空間での会話も可能です。他にも、3Dの絵を描いたり、世界の観光地をバーチャル観光したり。VRのコンテンツは次々と登場しているので、日々「できること」が増えています。</p>
+<p>また、Unityで制作したアプリケーションをQuest2でビルドすることも可能です。</p>
+<p>ファイルの拡張子は『APK』ファイルなのでAndroidの開発環境が必要になります。</p>
+<hr>
+<p><br></p>
+<h2 id="ビルドのための準備">ビルドのための準備</h2>
+<h3 id="開発者アカウント作成">開発者アカウント作成</h3>
+<p>まずは<a href="https://developer.oculus.com/" target="_blank">Oculus For Developers</a>というサイトへアクセスし、開発者用のアカウントを作成します。</p>
+<p><img src="img/image1-3.png" alt></p>
+<p>次に、<a href="https://developer.oculus.com/manage/" target="_blank">こちら</a>のサイトから新規でアプリケーションを作成します。</p>
+<p><img src="img/image1-4.png" alt></p>
+<p>今回はVRSampleという名前でQuest用のアプリケーションを選択しました。</p>
+<hr>
+<h3 id="oculus-questの開発者モードの有効化">Oculus Questの開発者モードの有効化</h3>
+<p><img src="img/image1-5.png" alt></p>
+<p>Oculusを開発者モードにするためにはスマートフォンのOculusアプリが必要になります。</p>
+<p>まずはPlayStoreからOculusのアプリケーションをダウンロードしてください。</p>
+<p>指示に従ってアカウント登録をしてください。この時Oculus側のアカウントとアプリの方のアカウントが同一でないと開発者モードにすることができないので注意してください。</p>
+<p><img src="img/image1-6.png" alt></p>
+<p>Oqulusの電源を入れてスマートフォンと同じWi-Fiに繋げるとアプリ側からOculusを見つけることができます。</p>
+<p>そうすると、「設定 → その他の設定 → 開発者モード」でOculusを開発者モードにすることができます。</p>
+<p><img src="img/image1-7.png" alt></p>
+<p>USBケーブルで「Oculus Quest」とPCを接続し、Oculusを被ると許可ウィンドウが出るので許可を押してください。</p>
+<p>この時Windowsでは「ADB」(Android Debug Bridge)のドライバのインストールも必要になるので、Windowsのかたはこちらもダウンロードしてください。</p>
+<h3 id="oculus-developer-hubのダウンロード">Oculus Developer Hubのダウンロード</h3>
+<p><img src="img/image1-2.png" alt></p>
+<p>次に<a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-mac/" target="_blank">Oculus Developer Hub</a>をダウンロードします。</p>
+<p>「Oculus Developer Hub」は、PCから直接Oculus Questの各種操作を行うためのツールです。</p>
+<p><img src="img/image1-8.png" alt></p>
+<p>ダウンロードが完了したら、画面の指示に従ってセットアップを行ってください。</p>
+<p><img src="img/image1-9.png" alt></p>
+<p>そうすると、先ほど作成したアプリケーションが表示されていると思いますので、画面左側の「My Device」を選択してください。</p>
+<p>「Oculus Developer Hub」の機能は、次のとおりです。</p>
+<ul>
+<li>Shutdown / Restart : シャットダウンおよびリスタート。</li>
+<li>Cast Device : 「Oculus Quest」の映像と音をPCにキャスト。</li>
+<li>Screenshot : スクリーンショットを撮影。</li>
+<li>Record Video : 動画を撮影。</li>
+<li>Media Directory : スクリーンショットや動画の保存作ディレクトリを開く。</li>
+<li>ADB over Wi-Fi : PCから「Oculus Quest」をWi-Fi（USBケーブルなし）で操作。</li>
+<li>Proximity Sensor : 近接センサーの無効化。</li>
+<li>Guardian : ガーディアンシステムの無効化。</li>
+<li>OVR Metrics : パフォーマンス情報の収集。</li>
+<li>Install : Oculus Developer Hubの画面内にドラッグ&amp;ドロップでapkをインストール。</li>
+<li>Launch / Uninstall : apkの起動およびアンインストール。 (apkが存在する時のみ表示されます)</li>
+</ul>
+<p><img src="img/image1-10.png" alt></p>
+<p>また、上の画像のようなウィンドウが出た場合は「Change ADB Path」でADBのパスを適切に変更してください。ADBとはデバッグの際にAndroidデバイスと通信をするために使用する主なツールです。
+USBで直接にまたはWi-Fi接続経由でTCP/IPにより、Androidデバイスに接続して通信することが可能です。</p>
+<p>デバイスをUSB経由で接続するには、互換性のあるUSBケーブルを使用してデバイスをPCにつなぎます。</p>
+<p>ここまででデバイス側の準備は一通り完了です。</p>
+<p>Unityの時もそうでしたが、このような開発ではこの初期設定が最初の関門になっております。</p>
+<p>また、リリースされたばかりのデバイスなどは設定画面等も刻々と変化していきますので、基本的に公式サイトを確認しながら実行してください。</p>
+<hr>
+<p><br></p>
+<h2 id="unityプロジェクトの準備">Unityプロジェクトの準備</h2>
+<p>では今まで作成してきたプロジェクトを使ってOculusQuest２にビルドできるようにしていきたいと思います。
+ただし、現在Quest2で動かせる環境にない可能性があるのでこちらのUnityプロジェクトを複製して必ず元のデータを取っておいてください。</p>
+<p><img src="img/image1-11.png" alt></p>
+<p>まずはUnityを開き、Build SettingsでAndroidを選択し、「Texture Compression」で「ASTC」を選択してください。</p>
+<p>ASTCとはテクスチャ圧縮フォーマットの種類です。データサイズを軽くしながらも綺麗に描画されます。</p>
+<p>テクスチャ圧縮フォーマットについて詳しく知りたい方は<a href="https://docs.unity3d.com/ja/2018.4/Manual/class-TextureImporterOverride.html" target="_blank">こちら</a>の公式サイトをご確認ください。</p>
+<p><br></p>
+<p>次にメニュー「Edit → Project Settings → Player」のAndroidタブの「Other Settings」で以下のように設定します。</p>
+<p><img src="img/image1-12.png" alt></p>
+<ul>
+<li>Package Name : 任意のパッケージ名 (例: net.npaka.HelloVR)</li>
+<li>Minimum API Level : Android 6.0 &quot;Mashmallow&quot; (API Level 23)</li>
+</ul>
+<p>次にメニュー「Edit → Project Settings → Quality」で以下のように設定してください。
+VRアプリでは、実際の水平解像度を50%減少させるステレオレンダリングを補うために、MSAA(Multi Samplking Anti Aliasing)レベルを十分高く設定する必要があります。</p>
+<p><img src="img/image1-13.png" alt></p>
+<ul>
+<li>Pixel Light Count : 1。</li>
+<li>Texture Quality : Full Res(フル解像度)。</li>
+<li>Anisotropic Textures : Per Texture (テクスチャーごと)。</li>
+<li>Anti Aliasing : 4x。</li>
+<li>Soft Particles : チェックなし。</li>
+<li>Realtime Reflections Probes : チェックあり。</li>
+<li>Billboards Face Camera : チェックあり。</li>
+</ul>
+<p><br></p>
+<p>次にXR Plugin Frameworkを準備します。</p>
+<p>メニュー「Edit → Project Settings → XR Plugin Management」で「Install XR Plugin Management」ボタンを押してください。</p>
+<p><img src="img/image1-14.png" alt></p>
+<p>「XR Plugin Management」がインストールされます。</p>
+<p><img src="img/image1-15.png" alt></p>
+<p>Androidタブの「Oculus」にチェックを入れると、
+「Oculus XR Plugin」がインストールされます。</p>
+<hr>
+<p><br></p>
+<p><img src="img/image1-16.png" alt></p>
+<p>次にアセットストアからOculus Integrationをインポート後，OVRCameraRigをヒエラルキーにドラッグ＆ドロップしてください。</p>
+<p><img src="img/image1-17.png" alt></p>
+<p>OVRCameraRig内にあるLeftHandAnchorとRightHandAnchorにOVRControllerPrefabを入れてください。</p>
+<p>次に左右OVRControllerPrefabのインスペクターからControllerをそれぞれL Touch，R Touchに変更してください。</p>
+<p>次にOVRCameraRigに新規スクリプト「VRScript」をアタッチしてVisualStudioでコードを以下のように追加します。</p>
+<pre><code class="lang-c#"><span class="hljs-keyword">using</span> System.Collections;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> UnityEngine.XR;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">VRScript</span> : <span class="hljs-title">MonoBehaviour</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> speed = <span class="hljs-number">0.02f</span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>(<span class="hljs-params"></span>)</span>
+    {
+        Move();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Move</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-comment">//右ジョイスティックの情報取得</span>
+        Vector2 stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
+        Vector3 changePosition = <span class="hljs-keyword">new</span> Vector3((stickR.x * speed), <span class="hljs-number">0</span>, (stickR.y * speed));
+        <span class="hljs-comment">//HMDのY軸の角度取得</span>
+        Vector3 changeRotation = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, InputTracking.GetLocalRotation(XRNode.Head).eulerAngles.y, <span class="hljs-number">0</span>);
+        <span class="hljs-comment">//OVRCameraRigの位置変更</span>
+        <span class="hljs-keyword">this</span>.transform.position += <span class="hljs-keyword">this</span>.transform.rotation * (Quaternion.Euler(changeRotation) * changePosition);
+    }
+}
+</code></pre>
+<p>現在向いている方を前として右ジョイスティックを傾けた方向に進みます。</p>
+<p>InputTracking.GetLocalRotation(XRNode.Head)でHMDの向いている方向を取得することができます。</p>
+<p>ここまで記述できたら保存してUnityをBuidしてみましょう。</p>
+<p>そうすると、APKファイルが出力されます。</p>
+<p><img src="img/image1-18.png" alt></p>
+<p>一応Oculus Developer HubにこちらのAPKファイルを追加しておきます。</p>
+<p>最後にパソコンとOculusQest2をUSBで繋ぎ、今度は「Build &amp; Run」を実行してください。
+きちんとパソコン、スマートフォン、Oculusが紐づいていれば自動的にビルドしたアプリがOculusで実行されているはずです。</p>
+<p>一度この環境を構築できればあとは基本的にアプリを作ってOculusで実行する流れは問題なくできると思いますが、この1回目が一番難しいポイントで挫折することが多いので焦らずしっかりセットアップをしていきましょう。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"UnityからOqulusQuest2へビルドする方法","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page1.md","mtime":"2021-05-09T12:58:19.041Z","type":"markdown"},"gitbook":{"version":"3.6.19","time":"2021-05-09T12:59:14.049Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
